@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signal Sprint</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell" aria-label="Signal Sprint game">
+      <section class="stage" aria-label="Game board">
+        <canvas id="game" width="960" height="640" aria-label="Signal Sprint canvas"></canvas>
+        <div class="curtain" id="curtain">
+          <p class="kicker">Signal Sprint</p>
+          <h1>Hold the line through the noise.</h1>
+          <button id="startButton" type="button">Start Run</button>
+        </div>
+      </section>
+
+      <aside class="panel" aria-label="Run status">
+        <div>
+          <p class="label">Score</p>
+          <p class="value" id="score">0</p>
+        </div>
+        <div>
+          <p class="label">Charge</p>
+          <div class="meter" aria-hidden="true">
+            <span id="chargeBar"></span>
+          </div>
+        </div>
+        <div class="stats">
+          <div>
+            <p class="label">Best</p>
+            <p class="small-value" id="best">0</p>
+          </div>
+          <div>
+            <p class="label">Level</p>
+            <p class="small-value" id="level">1</p>
+          </div>
+        </div>
+        <div class="controls" aria-label="Controls">
+          <p>Move with arrow keys, WASD, swipe, or click a lane.</p>
+          <p>Collect cyan cells. Avoid red pulses. Gold cells clear the board.</p>
+        </div>
+      </aside>
+    </main>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
